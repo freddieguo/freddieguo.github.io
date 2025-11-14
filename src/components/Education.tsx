@@ -5,10 +5,18 @@ import Reveal from "../animations/Reveal";
 
 const Section = styled.section`
   padding: 100px 10% 0;
-  display: flex;
-  justify-content: space-between;
-  gap: 60px;
-  align-items: flex-start;
+`;
+
+const Grid = styled.div`
+  display: grid;
+  gap: 40px;
+  align-items: center;
+  grid-template-columns: 1fr;
+
+  @media (min-width: 1100px) {
+    grid-template-columns: 1.1fr 1fr;
+    gap: 64px;
+  }
 `;
 
 const Left = styled.div`
@@ -78,6 +86,7 @@ const IllustrationWrap = styled.div`
 export default function Education() {
   return (
     <Section id="education">
+    <Grid>
     <Left>
       <Reveal>
         <Title>Education</Title>
@@ -118,7 +127,7 @@ export default function Education() {
           </IllustrationWrap>
         </Reveal>
     </Right>
-
+    </Grid>
     </Section>
   );
 }

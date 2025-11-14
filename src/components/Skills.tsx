@@ -16,7 +16,7 @@ const Grid = styled.div`
   grid-template-columns: 1fr;
 
   @media (min-width: 1100px) {
-    grid-template-columns: 1.1fr 1fr; /* 左插画 / 右内容 */
+    grid-template-columns: 1.1fr 1fr;
     gap: 64px;
   }
 `;
