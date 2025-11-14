@@ -10,10 +10,9 @@ const Section = styled.section`
 `;
 
 const Title = styled.h2`
-  font-size: 2.8rem;
+  font-size: 3rem;
   font-weight: 900;
   margin: 0 0 10px;
-  color: #111;
 `;
 
 const Subtitle = styled.p`
@@ -113,7 +112,7 @@ export default function Projects() {
   const projects: ProjectItem[] = [
     {
       title: "Walmart Sales Analytics",
-      image: "/projects/walmart.png",
+      image: "/projects/walmart.jpg",
       blurb:
         "Cleaned and modeled Walmart store-level sales to find which stores drive 80% of revenue and how promotions impact weekly demand.",
       cta: "View Case Study",
@@ -141,7 +140,7 @@ export default function Projects() {
       blurb:
         "Designed a cost & service tracking system at Tiger Sugar that cut waste by ~10% and improved customer retention by ~20%.",
       cta: "View Slide Deck",
-      href: "#", // 之后可以连到 PDF / Notion
+      href: "#", // 之后可以连到 PDF
     },
   ];
 

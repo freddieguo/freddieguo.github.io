@@ -3,10 +3,8 @@ import styled from "styled-components";
 import Image from "next/image";
 import Reveal from "../animations/Reveal";
 
-
 const Section = styled.section`
-  padding: 100px 10%;
-  background: #fff;
+  padding: 100px 10% 0;
   display: flex;
   justify-content: space-between;
   gap: 60px;
@@ -29,7 +27,7 @@ const Right = styled.div`
 `;
 
 const Title = styled.h2`
-  font-size: 2.8rem;
+  font-size: 3rem;
   font-weight: 800;
   margin-bottom: 40px;
 `;
@@ -77,6 +75,11 @@ const Info = styled.div`
   }
 `;
 
+const IllustrationWrap = styled.div`
+  display: grid;
+  place-items: center;
+`;
+
 export default function Education() {
   return (
     <Section id="education">
@@ -109,12 +112,15 @@ export default function Education() {
     <Right>
         {/* 这里就是 Storyset SVG 动画 */}
         <Reveal delay={0.15}>
+          <IllustrationWrap>
           <Image
             src="/animations/graduation.svg"
             alt="Graduation animation"
-            width={420}
+            width={560}
             height={420}
+            style={{ maxWidth: "100%", height: "auto" }}
           />
+          </IllustrationWrap>
         </Reveal>
     </Right>
 

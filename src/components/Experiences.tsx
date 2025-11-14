@@ -9,7 +9,7 @@ const Section = styled.section`
 `;
 
 const Title = styled.h2`
-  font-size: 2.8rem;
+  font-size: 3rem;
   font-weight: 900;
   margin-bottom: 48px;
   color: #111;
@@ -128,7 +128,7 @@ export default function Experiences() {
   const experiences: Experience[] = [
     {
       company: "Boston University",
-      role: "Research Analyst (Faculty-Supervised)",
+      role: "Research Analyst",
       dates: "Jan 2023 – Dec 2023",
       location: "Boston, MA",
       intro:
@@ -138,7 +138,7 @@ export default function Experiences() {
       highlight2:
         "Education & Labor Supply: compared 6 regression specs on 543K+ CPS records to show higher education correlates with longer working hours.",
       logo: "/companies/256px-Boston_University_Square_Logo.png",
-      color: "#CC0000",
+      color: "#b22319",
     },
     {
       company: "Tiger Sugar",
@@ -152,7 +152,7 @@ export default function Experiences() {
       highlight2:
         "Implemented service playbooks that raised customer retention by ~20% (repeat purchase rate).",
       logo: "/companies/tiger-sugar.png",
-      color: "#f97316",
+      color: "#a8955c",
     },
     {
       company: "MGM Grand",
@@ -166,7 +166,7 @@ export default function Experiences() {
       highlight2:
         "Kept front-of-house running smoothly during peak hours with fast, reliable teamwork.",
       logo: "/companies/mgm.png",
-      color: "#16a34a",
+      color: "#a57b36",
     },
     {
       company: "Caesars Entertainment",
@@ -180,7 +180,7 @@ export default function Experiences() {
       highlight2:
         "Maintained calm, professional table dynamics with players from all over the world.",
       logo: "/companies/caesars.png",
-      color: "#111827",
+      color: "#363636",
     },
   ];
 

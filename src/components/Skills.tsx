@@ -30,7 +30,7 @@ const Right = styled.div``;
 
 // ===== 标题 / 副标题 =====
 const Title = styled.h2`
-  font-size: 2.8rem;
+  font-size: 3rem;
   font-weight: 900;
   margin: 0 0 12px;
 `;
@@ -156,7 +156,7 @@ export default function Skills() {
         <Reveal>
           <IllustrationWrap>
             <Image
-              src="/next.svg"
+              src="/animations/computer.svg"
               alt="Data and coding illustration"
               width={560}
               height={420}
@@ -175,7 +175,7 @@ export default function Skills() {
             <Subtitle>Tools I use to ship real-world data stories</Subtitle>
           </Reveal>
 
-          {/* 图标：默认黑白，hover 彩色 */}
+          {/* 图标：彩色 */}
           <IconGrid
             variants={container}
             initial="hidden"
