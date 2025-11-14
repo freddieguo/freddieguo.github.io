@@ -10,7 +10,6 @@ const Section = styled.section`
   justify-content: space-between;
   gap: 60px;
   
-
   @media (max-width: 900px) {
     flex-direction: column;
     text-align: center;

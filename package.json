@@ -8,6 +8,7 @@
     "start": "next start",
     "export": "next export",
     "lint": "eslint .",
+    "predeploy": "npm run build && echo > out/.nojekyll",
     "deploy": "gh-pages -d out"
   },
   "dependencies": {

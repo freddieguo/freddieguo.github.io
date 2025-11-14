@@ -9,11 +9,6 @@ const Section = styled.section`
   justify-content: space-between;
   gap: 60px;
   align-items: flex-start;
-
-  @media (max-width: 900px) {
-    flex-direction: column;
-    text-align: center;
-  }
 `;
 
 const Left = styled.div`
