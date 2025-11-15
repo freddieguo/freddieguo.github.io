@@ -34,6 +34,7 @@ const Title = styled.h2`
 
 
 const P = styled.p`
+  font-size: 1.1rem;
   margin: 0 auto 16px;
   max-width: 640px;
   color: #667085;
@@ -94,14 +95,14 @@ export default function Contact() {
       <Left>
         <Reveal><Title>Contact Me <Emoji>☎️</Emoji></Title></Reveal>
         <Reveal delay={0.05}>
-          <P>Discuss a project or have a job opening? I’m actively seeking a data/analytics role.</P>
+          <P>Have a project in mind or a job opening? I'm actively seeking new grad data analyst opportunities, feel free to reach out!</P>
         </Reveal>
         <Reveal delay={0.1}>
-          <Info>+1 (XXX) XXX-XXXX · freddieguo@gmail.com</Info>
+          <Info>+1 (725) 400-2008 · freddieguo@gmail.com</Info>
         </Reveal>
         <Reveal delay={0.16}>
           <Row>
-            <IconBtn href="https://github.com/" target="_blank" rel="noreferrer">
+            <IconBtn href="https://github.com/freddieguo" target="_blank" rel="noreferrer">
               <Image 
                 src="/tech/icons8-github-96.png" 
                 alt="GitHub" 
@@ -110,7 +111,7 @@ export default function Contact() {
               />
             </IconBtn>
 
-            <IconBtn href="https://www.linkedin.com/" target="_blank" rel="noreferrer">
+            <IconBtn href="https://www.linkedin.com/in/freddie-guo" target="_blank" rel="noreferrer">
               <Image 
                 src="/tech/icons8-linkedin-96.png" 
                 alt="LinkedIn"
@@ -132,7 +133,6 @@ export default function Contact() {
       </Left>
 
       <Right>
-        {/* 放 SVG，如果是文件放在 public/animations 里 */}
         <IllustrationWrap>
         <Image
           src="/animations/team.svg"

@@ -23,7 +23,6 @@ const Subtitle = styled.p`
   font-weight: 600;
 `;
 
-// 卡片网格
 const Grid = styled.div`
   display: grid;
   gap: 28px;
@@ -37,7 +36,6 @@ const Grid = styled.div`
   }
 `;
 
-// 单张卡片
 const Card = styled(motion.article)`
   background: #ffffff;
   border-radius: 24px;
@@ -69,6 +67,15 @@ const ProjectTitle = styled.h3`
   text-align: center;
 `;
 
+const Tech = styled.p`
+  font-size: 0.84rem;
+  text-align: center;
+  margin: 0 0 10px;
+  line-height: 1.6;
+  font-weight: bold;
+  color: #374151;
+`;
+
 const Text = styled.p`
   font-size: 0.9rem;
   color: #4b5563;
@@ -77,7 +84,6 @@ const Text = styled.p`
   text-align: center;
 `;
 
-// CTA 按钮
 const Cta = styled.a`
   align-self: center;
   margin-top: auto;
@@ -99,49 +105,55 @@ const Cta = styled.a`
   }
 `;
 
-// ------- 类型 & 数据 -------
+
 type ProjectItem = {
   title: string;
   image: string;
-  blurb: string;
+  tech: string;
+  intro: string;
   cta: string;
   href: string;
 };
+
 
 export default function Projects() {
   const projects: ProjectItem[] = [
     {
       title: "Walmart Sales Analytics",
       image: "/projects/walmart.jpg",
-      blurb:
-        "Cleaned and modeled Walmart store-level sales to find which stores drive 80% of revenue and how promotions impact weekly demand.",
+      tech: "Python (pandas, matplotlib), SQLite (SQL queries)",
+      intro:
+        "I used Python and SQL to clean, transform, and analyze Walmart’s multi-store retail dataset. By querying data with SQLite and performing EDA in pandas, I identified revenue concentration patterns, seasonal demand spikes, and department-level performance insights that reflect real retail operational dynamics.",
       cta: "View Case Study",
       href: "https://github.com/freddieguo/walmart-sales-analysis",
     },
     {
-      title: "Personal Portfolio Website",
-      image: "/projects/portfolio.png",
-      blurb:
-        "This site itself: a Next.js + styled-components portfolio designed to showcase data projects and real-world impact for recruiters.",
-      cta: "View Source Code",
-      href: "https://github.com/yourname/portfolio", // TODO
+      title: "Education & Labor Impact",
+      image: "/projects/book.jpg",
+      tech: "Stata (regression modeling)",
+      intro:
+        "I analyzed 543K+ IPUMS CPS microdata records and engineered multiple regression models to examine how educational attainment relates to weekly working hours. I compared six model specifications and selected the best-fit model using statistical testing to ensure accuracy and meaningful labor-market insights.",
+      cta: "View Full Paper (PDF)",
+      href: "/papers/labor_regression.pdf",
     },
     {
-      title: "Urban Housing & Metro Impact",
-      image: "/projects/research.png",
-      blurb:
-        "Staggered Difference-in-Differences models on 600K+ transactions to quantify how new subway lines reshape housing prices.",
-      cta: "Read Research Summary",
-      href: "#", // 可以先放占位
+      title: "Housing & Metro Impact",
+      image: "/projects/subway.jpg",
+      tech: "Stata (Difference-in-Differences)",
+      intro:
+        "I conducted a large-scale econometric analysis using 600K+ housing transactions to study how new subway stations affect local home prices. I built staggered Difference-in-Differences (event-study) models to capture dynamic impacts and translate statistical results into clear, decision-ready insights for infrastructure planning.",
+      cta: "View Full Paper (PDF)",
+      href: "/papers/housing_did.pdf",
     },
-    {
-      title: "Store Ops & Service Playbook",
-      image: "/projects/store-ops.png",
-      blurb:
-        "Designed a cost & service tracking system at Tiger Sugar that cut waste by ~10% and improved customer retention by ~20%.",
-      cta: "View Slide Deck",
-      href: "#", // 之后可以连到 PDF
-    },
+    // {
+    //   title: "",
+    //   image: "",
+    //   tech: "",
+    //   intro:
+    //     "",
+    //   cta: "",
+    //   href: "#",
+    // },
   ];
 
   return (
@@ -170,7 +182,8 @@ export default function Projects() {
               </Cover>
               <Body>
                 <ProjectTitle>{p.title}</ProjectTitle>
-                <Text>{p.blurb}</Text>
+                <Tech>{p.tech}</Tech>
+                <Text>{p.intro}</Text>
                 <Cta href={p.href} target="_blank" rel="noreferrer">
                   {p.cta}
                 </Cta>

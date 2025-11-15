@@ -15,7 +15,6 @@ const Title = styled.h2`
   color: #111;
 `;
 
-// 卡片网格
 const Grid = styled.div`
   display: grid;
   gap: 32px;
@@ -29,7 +28,6 @@ const Grid = styled.div`
   }
 `;
 
-// 单张卡片
 const Card = styled.div`
   border-radius: 24px;
   overflow: hidden;
@@ -46,7 +44,6 @@ const Card = styled.div`
   }
 `;
 
-// 彩色头部
 const CardTop = styled.div<{ $color: string }>`
   background: ${({ $color }) => $color};
   padding: 55px;
@@ -60,7 +57,6 @@ const CompanyName = styled.div`
   font-size: 1.1rem;
 `;
 
-// 圆形 logo（悬浮在卡片中间）
 const LogoCircle = styled.div`
   position: absolute;
   left: 50%;
@@ -77,7 +73,6 @@ const LogoCircle = styled.div`
   overflow: hidden;
 `;
 
-// 卡片主体
 const CardBody = styled.div`
   padding: 60px 24px 26px;
   text-align: center;
@@ -127,61 +122,55 @@ type Experience = {
 export default function Experiences() {
   const experiences: Experience[] = [
     {
+      company: "Handshake AI",
+      role: "Data Annotation Specialist",
+      dates: "Oct 2025 - Present",
+      location: "Remote",
+      intro:
+        "I annotate and quality-check large datasets used for training AI models. My work focuses on ensuring accurate labeling, spotting inconsistencies, and improving the clarity and reliability of data used in machine learning workflows.",
+      logo: "/companies/handshake-ai.png",
+      color: "#8ab24b",
+    },
+    {
       company: "Boston University",
       role: "Research Analyst",
-      dates: "Jan 2023 – Dec 2023",
+      dates: "Jan 2023 - Dec 2023",
       location: "Boston, MA",
       intro:
-        "Designed and ran econometric studies turning large datasets into insights for urban planning and labor policy.",
-      highlight1:
-        "Infrastructure & Housing: built staggered DiD models on 600K+ transactions; found +26.5% price lift near subway stations and −35.6% beyond 3km.",
-      highlight2:
-        "Education & Labor Supply: compared 6 regression specs on 543K+ CPS records to show higher education correlates with longer working hours.",
+        "I conducted econometric research using large datasets to generate insights for urban planning and labor policy decisions. I built DID models and regression specifications to measure causal impacts and translate statistical results into actionable findings.",
       logo: "/companies/256px-Boston_University_Square_Logo.png",
       color: "#b22319",
     },
     {
       company: "Tiger Sugar",
       role: "Assistant Manager",
-      dates: "Dec 2020 – May 2022",
+      dates: "Dec 2020 - May 2022",
       location: "Las Vegas, NV",
       intro:
-        "Supported an international bubble-tea brand in a high-volume retail environment with 250+ global stores.",
-      highlight1:
-        "Led scheduling and performance for 8 staff; introduced cost & waste tracking that cut waste by ~10%.",
-      highlight2:
-        "Implemented service playbooks that raised customer retention by ~20% (repeat purchase rate).",
+        "I managed daily operations for a high-volume retail store, supervising staff, improving workflow, and reducing waste through cost tracking. I introduced service and efficiency processes that increased repeat customers and improved overall store performance.",
       logo: "/companies/tiger-sugar.png",
       color: "#a8955c",
     },
     {
       company: "MGM Grand",
       role: "Busperson",
-      dates: "Jul 2021 – Nov 2021",
+      dates: "Jul 2021 - Nov 2021",
       location: "Las Vegas, NV",
       intro:
-        "Worked inside one of the world’s largest hotel & casino resorts, serving thousands of guests.",
-      highlight1:
-        "Supported dining operations in a high-throughput restaurant, clearing and resetting 100+ tables per shift.",
-      highlight2:
-        "Kept front-of-house running smoothly during peak hours with fast, reliable teamwork.",
+        "I supported fast-paced restaurant operations at one of the world’s largest resorts, maintaining high service standards while coordinating with back-of-house teams to handle large guest volumes efficiently.",
       logo: "/companies/mgm.png",
       color: "#a57b36",
     },
-    {
-      company: "Caesars Entertainment",
-      role: "Tournament Dealer",
-      dates: "Summers 2024 & 2025",
-      location: "Las Vegas, NV",
-      intro:
-        "Dealt at the largest poker tournament series in the world, under cameras and high-stakes pressure.",
-      highlight1:
-        "Delivered precise, error-free dealing across hundreds of hands daily while enforcing rules consistently.",
-      highlight2:
-        "Maintained calm, professional table dynamics with players from all over the world.",
-      logo: "/companies/caesars.png",
-      color: "#363636",
-    },
+    // {
+    //   company: "Caesars Entertainment",
+    //   role: "Tournament Dealer",
+    //   dates: "Summers 2024 & 2025",
+    //   location: "Las Vegas, NV",
+    //   intro:
+    //     "I dealt hands accurately and efficiently in a high-pressure tournament environment, ensuring fairness and smooth gameplay during events attended by thousands of players.",
+    //   logo: "/companies/caesars.png",
+    //   color: "#363636",
+    // },
   ];
 
   return (
@@ -211,10 +200,7 @@ export default function Experiences() {
                 <Role>{exp.role}</Role>
                 <Time>{exp.dates}</Time>
                 <Location>{exp.location}</Location>
-
                 <Description>{exp.intro}</Description>
-                {exp.highlight1 && <Description>{exp.highlight1}</Description>}
-                {exp.highlight2 && <Description>{exp.highlight2}</Description>}
               </CardBody>
             </Card>
           </Reveal>

@@ -19,7 +19,7 @@ const Row = styled.div`
 `;
 
 const Label = styled.div`
-  font-size: 15px;
+  font-size: 0.98rem;
   margin-bottom: 10px;
   color: #222;
   font-weight: 600;
@@ -40,9 +40,9 @@ const Fill = styled(motion.div)`
 
 export default function Proficiency() {
   const bars = [
-    { label: "Data / Analytics", v: 90 },
-    { label: "Algorithm", v: 85 },
-    { label: "System / Firmware", v: 70 },
+    { label: "Data Cleaning & Preparation", v: 90 },
+    { label: "Exploratory data analysis (EDA)", v: 85 },
+    { label: "Business Insight Communication", v: 70 },
   ];
 
   return (

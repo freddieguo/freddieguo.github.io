@@ -4,7 +4,7 @@ import Image from "next/image";
 import Reveal from "../animations/Reveal";
 
 const Section = styled.section`
-  padding: 100px 10% 0;
+  padding: 80px 10% 35px;
 `;
 
 const Grid = styled.div`
@@ -27,6 +27,7 @@ const Right = styled.div`
   flex: 1;
   display: flex;
   justify-content: center;
+  padding-top: 62px;
 `;
 
 const Title = styled.h2`
@@ -48,7 +49,6 @@ const Item = styled.div`
   }
 `;
 
-// --- Logo 区块 ---
 const LogoBox = styled.div`
   width: 70px;
   height: 70px;
@@ -60,9 +60,9 @@ const LogoBox = styled.div`
   align-items: center;
   justify-content: center;
   flex-shrink: 0;   
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.35);
 `;
 
-// --- 文本区块 ---
 const Info = styled.div`
   line-height: 1.6;
 
@@ -82,6 +82,7 @@ const IllustrationWrap = styled.div`
   display: grid;
   place-items: center;
 `;
+
 
 export default function Education() {
   return (
@@ -106,15 +107,16 @@ export default function Education() {
 
           <Info>
             <h3>Boston University</h3>
-            <p>B.A. in Computer Science & Economics</p>
-            <p>Econometrics research; Data visualization; Algorithms.</p>
+            <p><b>B.A. in Computer Science & Economics</b></p>
+            <p>September 2022 - January 2025</p>
+            <p>Relevant Coursework: Behavioral Economics, Econometrics, Database Systems, Algorithm, Web Development.</p>
           </Info>
         </Item>
       </Reveal>
     </Left>
 
     <Right>
-        {/* 这里就是 Storyset SVG 动画 */}
+        {/* SVG animation from Storyset*/}
         <Reveal delay={0.15}>
           <IllustrationWrap>
           <Image

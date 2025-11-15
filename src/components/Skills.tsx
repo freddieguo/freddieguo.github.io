@@ -4,7 +4,6 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import Reveal from "../animations/Reveal";
 
-// ===== 布局 =====
 const Section = styled.section`
   padding: 100px 10%;
 `;
@@ -26,9 +25,11 @@ const IllustrationWrap = styled.div`
   place-items: center;
 `;
 
-const Right = styled.div``;
+const Right = styled.div`
 
-// ===== 标题 / 副标题 =====
+`;
+
+
 const Title = styled.h2`
   font-size: 3rem;
   font-weight: 900;
@@ -43,7 +44,6 @@ const Subtitle = styled.p`
   text-transform: uppercase;
 `;
 
-// ===== 图标网格 =====
 const IconGrid = styled(motion.div)`
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -55,7 +55,7 @@ const IconGrid = styled(motion.div)`
   }
 `;
 
-// 单个图标：默认黑白，hover 变彩色 + 上浮
+// Icon
 const IconItem = styled(motion.div)`
   display: grid;
   place-items: center;
@@ -82,7 +82,7 @@ const IconItem = styled(motion.div)`
   }
 `;
 
-// ===== 闪电要点 =====
+// Bullet Points
 const Bullets = styled.div`
   display: grid;
   row-gap: 16px;
@@ -103,7 +103,7 @@ const Bullet = styled(motion.div)`
   }
 `;
 
-// ===== framer-motion 动画配置 =====
+// Framer-motion
 const container = {
   hidden: { opacity: 0 },
   show: {
@@ -120,13 +120,12 @@ const item = {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.45, // 不写 ease，默认的就已经很好看
+      duration: 0.45,
     },
   },
 };
 
 export default function Skills() {
-  // 使用你当前 public/tech 下的 PNG 文件名
   const tech = [
     { icon: "/tech/icons8-html-5-96.png", label: "HTML5" },
     { icon: "/tech/icons8-css3-96.png", label: "CSS3" },
@@ -143,16 +142,16 @@ export default function Skills() {
   ];
 
   const bullets = [
-    "Turn messy datasets into clean, decision-ready insights with Python / SQL / Excel / Power BI.",
+    "Turn messy datasets into clear, decision-ready insights with Python / SQL / Excel.",
+    "Build dashboards and data stories using Power BI and advanced visualization methods.",
     "Build full-stack projects with React / Next.js and Node.js.",
-    "Automate data workflows and reporting to save time for teams.",
-    "Communicate findings clearly through dashboards and visual stories.",
+    "Use analytical thinking to support real-world decision-making in business settings.",
   ];
 
   return (
     <Section id="skills">
       <Grid>
-        {/* 左边插画：先用 globe.svg 占位，以后你可以换成自己的插画 PNG/SVG */}
+        {/* Left */}
         <Reveal>
           <IllustrationWrap>
             <Image
@@ -166,7 +165,7 @@ export default function Skills() {
           </IllustrationWrap>
         </Reveal>
 
-        {/* 右边内容 */}
+        {/* Right */}
         <Right>
           <Reveal>
             <Title>What I do</Title>
@@ -175,7 +174,7 @@ export default function Skills() {
             <Subtitle>Tools I use to ship real-world data stories</Subtitle>
           </Reveal>
 
-          {/* 图标：彩色 */}
+          {/* Icon */}
           <IconGrid
             variants={container}
             initial="hidden"
@@ -196,7 +195,7 @@ export default function Skills() {
             ))}
           </IconGrid>
 
-          {/* 闪电要点 */}
+          {/* Bullet Points */}
           <Bullets>
             {bullets.map((b, i) => (
               <Bullet
