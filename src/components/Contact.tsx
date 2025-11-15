@@ -95,7 +95,7 @@ export default function Contact() {
       <Left>
         <Reveal><Title>Contact Me <Emoji>☎️</Emoji></Title></Reveal>
         <Reveal delay={0.05}>
-          <P>Have a project in mind or a job opening? I'm actively seeking new grad data analyst opportunities, feel free to reach out!</P>
+          <P>Have a project in mind or a job opening? I am actively seeking new grad data analyst opportunities, feel free to reach out!</P>
         </Reveal>
         <Reveal delay={0.1}>
           <Info>+1 (725) 400-2008 · freddieguo@gmail.com</Info>

@@ -7,8 +7,6 @@ import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
 import Proficiency from "@/components/Proficiency";
 
-import Reveal from "@/animations/Reveal";
-
 export default function Page() {
   return (
     <>
