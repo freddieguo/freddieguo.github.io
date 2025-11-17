@@ -107,7 +107,7 @@ export default function Education() {
 
           <Info>
             <h3>Boston University</h3>
-            <p><b>B.A. in Computer Science & Economics</b></p>
+            <p><b>Bachelor of Arts in Computer Science & Economics</b></p>
             <p>September 2022 - January 2025</p>
             <p>Relevant Coursework: Behavioral Economics, Econometrics, Database Systems, Algorithm, Web Development.</p>
           </Info>
