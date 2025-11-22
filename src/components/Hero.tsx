@@ -162,7 +162,7 @@ export default function Hero() {
           <Btn href="#contact" $primary>
             CONTACT ME
           </Btn>
-          <Btn href="papers/resume.pdf">SEE MY RESUME</Btn>
+          <Btn href="papers/FreddieGuoResume.docx.pdf">SEE MY RESUME</Btn>
         </Buttons>
       </Left>
 
