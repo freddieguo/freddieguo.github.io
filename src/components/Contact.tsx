@@ -98,7 +98,7 @@ export default function Contact() {
           <P>Have a project in mind or a job opening? I am actively seeking new grad data analyst opportunities, feel free to reach out!</P>
         </Reveal>
         <Reveal delay={0.1}>
-          <Info>+1 (725) 400-2008 · freddieguo@gmail.com</Info>
+          <Info>+1 (725) 400-2008 · guofreddie@gmail.com</Info>
         </Reveal>
         <Reveal delay={0.16}>
           <Row>
@@ -120,7 +120,7 @@ export default function Contact() {
               />
             </IconBtn>
 
-            <IconBtn href="mailto:freddieguo@gmail.com">
+            <IconBtn href="mailto:guofreddie@gmail.com">
               <Image 
                 src="/tech/icons8-email-96.png" 
                 alt="Email" 
