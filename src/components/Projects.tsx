@@ -119,12 +119,12 @@ type ProjectItem = {
 export default function Projects() {
   const projects: ProjectItem[] = [
     {
-      title: "Walmart Sales Analytics",
+      title: "Walmart Sales Analysis",
       image: "/projects/walmart.jpg",
       tech: "Python (pandas, matplotlib), SQLite (SQL queries)",
       intro:
-        "I used Python and SQL to clean, transform, and analyze Walmart’s multi-store retail dataset. By querying data with SQLite and performing EDA in pandas, I identified revenue concentration patterns, seasonal demand spikes, and department-level performance insights that reflect real retail operational dynamics.",
-      cta: "View Case Study",
+        "I used Python and SQL to clean, transform, and analyze Walmart's multi-store retail dataset. By querying data with SQLite and performing EDA in pandas, I identified revenue concentration patterns, seasonal demand spikes, and department-level performance insights that reflect real retail operational dynamics.",
+      cta: "View Case Study (GitHub)",
       href: "https://github.com/freddieguo/walmart-sales-analysis",
     },
     {
@@ -144,6 +144,15 @@ export default function Projects() {
         "I conducted a large-scale econometric analysis using 600K+ housing transactions to study how new subway stations affect local home prices. I built staggered Difference-in-Differences (event-study) models to capture dynamic impacts and translate statistical results into clear, decision-ready insights for infrastructure planning.",
       cta: "View Full Paper (PDF)",
       href: "/papers/housing_did.pdf",
+    },
+    {
+      title: "Fast-Food A/B Test Analysis",
+      image: "/projects/fastfood.jpg",
+      tech: "Python, SQL",
+      intro:
+        "This project is still in progress. I designed the analysis pipeline for a three-way A/B test to compare different marketing promotions. I used statistical tests, effect sizes, and simple segmentation to see which promotion led to the biggest sales lift.",
+      cta: "View Project (GitHub)",
+      href: "https://github.com/freddieguo/fastfood-marketing-ab-test",
     },
     // {
     //   title: "",
